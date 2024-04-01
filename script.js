@@ -42,6 +42,30 @@ const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+// JavaScript code
+// JavaScript code
+// JavaScript code
+function addToCart(itemName, itemPrice, button) {
+  // Show an alert with the item details
+  const message = `Do you want to add ${itemName} to your cart for ${itemPrice}?`;
+  const confirmed = confirm(message);
 
+  // Check if the user confirmed
+  if (confirmed) {
+    // Perform further actions here, such as adding the item to a shopping cart
+    // For demonstration purposes, let's log the item details
+    console.log(`Added ${itemName} to cart. Price: ${itemPrice}`);
 
-// JavaScript for any additional functionality can be added here
+    // Get the message span next to the clicked button
+    const addedToCartMsg = button.nextElementSibling;
+    
+    // Show the "+1 added to cart" message
+    addedToCartMsg.style.display = 'inline';
+    
+    // Hide the message after 2 seconds
+    setTimeout(function() {
+      addedToCartMsg.style.display = 'none';
+    }, 2000);
+  }
+}
+
